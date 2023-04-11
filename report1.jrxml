@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c2b54883-a635-4e2e-8c6b-46d8e2405544">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="107"/>
+	<parameter name="fromy" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="toy" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fromd" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tod" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="toD" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fromD" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM disasterrecords
+]]>
+	</queryString>
+	<field name="Rank" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="death" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="affected" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="damages" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="location" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cause" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="144" y="0" width="261" height="52" uuid="f044b74f-ace4-4b52-ae2d-3c36d6392c27"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="24"/>
+				</textElement>
+				<text><![CDATA[DISASTER RECORDS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="290" splitType="Stretch">
+			<textField>
+				<reportElement x="144" y="23" width="100" height="20" uuid="cb4ab9f0-98be-4628-9efd-ef531a91c2ab"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="67" width="100" height="20" uuid="4aa7d88f-9112-4352-b8f7-2f0d4c921d43"/>
+				<textFieldExpression><![CDATA[$F{Rank}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="111" width="100" height="20" uuid="b556f0ff-277c-4ebe-92fc-33958ae3b7da"/>
+				<text><![CDATA[year]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="111" width="100" height="20" uuid="5f7b0edf-0675-49c6-9a60-2de8d03431e6"/>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="161" width="100" height="20" uuid="2716509f-4a54-4aaf-afcc-754286233999"/>
+				<text><![CDATA[death]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="161" width="100" height="20" uuid="ab226110-97a9-4557-a2d1-13614012cb2a"/>
+				<textFieldExpression><![CDATA[$F{death}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="193" width="100" height="20" uuid="93680e93-7e9a-4ac2-869c-6c6609f9a08a"/>
+				<text><![CDATA[affected]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="193" width="100" height="20" uuid="2298b7a9-e00a-4226-9bec-c3bd0e3ca204"/>
+				<textFieldExpression><![CDATA[$F{affected}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="221" width="100" height="20" uuid="cc47d6b3-6712-4e07-b034-3f57c9fa5410"/>
+				<text><![CDATA[damages]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="221" width="100" height="20" uuid="bd7cd28c-f57c-40a6-ae73-f1a26626fdd1"/>
+				<textFieldExpression><![CDATA[$F{damages}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="245" width="100" height="20" uuid="eef8ab7e-0ed0-4c17-bf3d-b96b74b0a909"/>
+				<text><![CDATA[location]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="245" width="100" height="20" uuid="4842d6ae-0abe-439b-b8ae-283cb3d2a55c"/>
+				<textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="270" width="100" height="20" uuid="99d6e73c-cc76-4a34-a536-3fcf020c6fd3"/>
+				<text><![CDATA[cause]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="270" width="100" height="20" uuid="f5ee214b-bbb6-4637-a4ea-9254bcae5e39"/>
+				<textFieldExpression><![CDATA[$F{cause}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
